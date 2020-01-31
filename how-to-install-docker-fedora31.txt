@@ -1,0 +1,13 @@
+(1)Login as a sudo user
+(2)sudo dnf install -y grubby
+(3)sudo grubby --update-kernel=ALL --args="systemd.unified_cgroup_hierarchy=0"
+(4)reboot
+(5)sudo dnf config-manager --add-repo=https://download.docker.com/linux/fedora/docker-ce.repo
+(6)sudo dnf install docker-ce
+(7)sudo systemctl enable --now docker
+(8)systemctl status docker
+(9)reboot
+
+(10)Once system is up and running, issue
+    docker ps -a
+    To make sure docker-engine is up and running 
